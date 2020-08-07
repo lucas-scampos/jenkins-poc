@@ -6,3 +6,17 @@ pipelineJob('pipelineJob') {
         }
     }
 }
+pipelineJob('gorila-job') {
+    definition {
+        cpsScm {
+            scm {
+                git {
+                    remote {
+                        url 'https://github.com/jpozorio/gorila-hackathon.git'
+                    }
+                    branch 'G-19'
+                }
+            }
+        }
+    }
+}
