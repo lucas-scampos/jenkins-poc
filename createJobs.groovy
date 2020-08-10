@@ -13,6 +13,7 @@ pipelineJob('gorila-job') {
                 git {
                     remote {
                         url 'https://github.com/jpozorio/gorila-hackathon.git'
+                        credentials 'github-credentials'
                     }
                     branch 'G-19'
                 }
