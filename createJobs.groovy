@@ -6,6 +6,16 @@ pipelineJob('pipelineJob') {
         }
     }
 }
+
+pipelineJob('guilhermeJob') {
+    definition {
+        cps {
+            script(readFileFromWorkspace('helloJob.groovy'))
+            sandbox()
+        }
+    }
+}
+
 pipelineJob('gorila-job') {
     definition {
         cpsScm {
